@@ -1,4 +1,7 @@
 # cosmosjs Tutorial
+HackAtom 발표 'CosmosJS로 Kava의 USDX 결제연동하기'의 시연 코드입니다.
+
+## Requirement
 cosmosjs Tutorial requires Node.js >=8.0.0
 
 ## 튜토리얼 코드 설치방법
@@ -92,4 +95,9 @@ const address = kava.getAddress(mnemonic);
 
 ## Kava faucet URL
 - https://faucet.kava.io/
+
+## 랜덤 니모닉 생성
+- https://iancoleman.io/bip39/
+
+
 
