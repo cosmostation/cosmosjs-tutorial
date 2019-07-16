@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Kava USDX Payment Demo</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Site Description Here">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/stack-interface.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/socicon.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/lightbox.min.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/flickity.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/iconsmind.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/jquery.steps.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    </head>
+    <body class=" ">
+        <a id="start"></a>
+        <div class="main-container">
+            <section class="song-title">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h1 class="song-h1"><img src="img/checkout_ic.png" alt=""> Checkout</h1>
+                            <hr>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <section>
+                <div class="container">
+                    <form class="cart-form">
+                        <div class="row">
+                            <div class="col-md-4 song-prd">
+                                <div class="product">
+                                    <span class="label">QTY: 1</span>
+                                    <img alt="Image" src="img/product-small-2.png" />
+                                    <div>
+                                        <h5>Magic Keyboard</h5>
+                                        <span> (US English)</span>
+                                    </div>
+                                    <div>
+                                        <span class="h4 inline-block song-price">$99.00</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row mt--2">
+                            <div class="col-md-12">
+                                <div class="boxed boxed--border cart-total song-form">
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span class="h5">Cart Subtotal</span>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <span>$99.00</span>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <span class="h5">Shipping (US)</span>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <span>$0.00</span>
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div class="row song-total">
+                                        <div class="col-6">
+                                            <span class="h5">Total</span>
+                                        </div>
+                                        <div class="col-6 text-right">
+                                            <span class="h5 song-total-price">$99.00</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--end of row-->
+                        <!-- <div class="row justify-content-end">
+                            <div class="col-lg-2 col-md-3 text-right text-center-xs">
+                                <button type="submit" class="btn btn--primary type--uppercase">Checkout</button>
+                            </div>
+                        </div> -->
+                        <!--end of row-->
+                        <br>
+                        <br>
+                        <div class="modal-instance song-btn-wrap">
+                            <a class="btn btn--primary modal-trigger" href="#" onclick="checkPayment(<%= paymentAddress %>);">
+                                <span class="btn__text">
+                                   Checkout
+                                </span>
+                            </a>
+                            <div class="modal-container">
+                                <div class="modal-content">
+                                    <!-- MODAL CONTENT HERE -->
+                                    <div class="boxed boxed--lg song-modal">
+                                        <h2>Checkout</h2>
+                                        <span>Magic Keyboard (US English)</span>
+                                        <div id="loading21"><div class="gradient"></div></div>
+                                        <!-- 결제 정보 -->
+                                        <div class="song-modal-coin-info">
+                                            <p>To pay send USDX to the address berow.</p>
+                                            <!-- amount -->
+                                            <div>
+                                                <div class="song-modal-coin-info-icon usd">
+                                                    <span>99.00</span>USD
+                                                </div>
+                                                <div class="song-modal-coin-info-txt">
+                                                    <h3>Amount</h3>
+                                                    <p>99.00 USDX <span>(99.00 USD)</span></p>
+                                                </div>
+                                            </div>
+                                            <!-- address -->
+                                            <div>
+                                                <div class="song-modal-coin-info-icon">
+                                                    <div><img src="https://chart.googleapis.com/chart?chs=160x160&cht=qr&chl=<%= paymentAddress %>"></div>
+                                                </div>
+                                                <div class="song-modal-coin-info-txt">
+                                                    <h3>Address</h3>
+                                                    <p><%= paymentAddress %></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- 결제 정보 end -->
+                                        <!-- 결제 결과 -->
+                                        <div class="song-modal-result" style="display: none;">
+                                            <!-- 성공 -->
+                                            <p class="success"><i class="material-icons">done</i>Thank you for your payment. We have received your payment.</p>
+                                            <!-- 에러 -->
+                                            <!-- <p class="error"><i class="material-icons">error_outline</i>error msg</p> -->
+                                        </div>
+                                        <!-- 결제 결과 end -->
+                                    </div>
+                                    <div class="modal-close modal-close-cross"></div>
+                                </div>
+                            </div>
+                        </div><!--end of modal instance-->
+                    </form>
+                    <!--end checkout form-->
+                </div>
+                <!--end of container-->
+            </section>
+        </div>
+        <!--<div class="loader"></div>-->
+        <a class="back-to-top inner-link" href="#start" data-scroll-class="100vh:active">
+            <i class="stack-interface stack-up-open-big"></i>
+        </a>
+        <script src="js/jquery-3.1.1.min.js"></script>
+        <script src="js/flickity.min.js"></script>
+        <script src="js/easypiechart.min.js"></script>
+        <script src="js/parallax.js"></script>
+        <script src="js/typed.min.js"></script>
+        <script src="js/datepicker.js"></script>
+        <script src="js/isotope.min.js"></script>
+        <script src="js/ytplayer.min.js"></script>
+        <script src="js/lightbox.min.js"></script>
+        <script src="js/granim.min.js"></script>
+        <script src="js/jquery.steps.min.js"></script>
+        <script src="js/countdown.min.js"></script>
+        <script src="js/twitterfetcher.min.js"></script>
+        <script src="js/spectragram.min.js"></script>
+        <script src="js/smooth-scroll.min.js"></script>
+        <script src="js/scripts.js"></script>
+        <script src="js/usdx.js"></script>
+    </body>
+</html>

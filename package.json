@@ -1,0 +1,11 @@
+{
+  "name": "express-tutorial",
+  "version": "1.0.0",
+  "dependencies": {
+    "@cosmostation/cosmosjs": "github:cosmostation/cosmosjs",
+    "body-parser": "^1.19.0",
+    "ejs": "~2.4.1",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2"
+  }
+}

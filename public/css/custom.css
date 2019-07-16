@@ -1,0 +1,237 @@
+/*! Place your custom styles here */
+.modal-container:before {
+   background: rgba(203, 203, 203, 0.85);
+}
+
+.modal-container .modal-content .modal-close-cross {
+   color: #fff;
+}
+
+.song-title {
+   padding-top: 5em;
+}
+
+.song-h1 {}
+
+.song-h1>img {
+   vertical-align: top;
+   margin-top: 7px;
+}
+
+.song-h1+hr {
+   border-top: 3px solid #222222;
+}
+
+.song-prd {
+   margin: 0 auto;
+   text-align: center;
+}
+
+.song-prd .label:not([class*='bg--']) {
+   font-size: 14px;
+   background-color: #06c200;
+}
+
+.song-price {
+   font-size: 24px;
+   font-weight: 600;
+   color: #222;
+}
+
+.song-form {
+   background: #f8f8f8 !important;
+   border-color: #d6d6d6 !important;
+   color: #222;
+   font-size: 18px;
+}
+
+.song-form hr {
+   border-color: #d6d6d6;
+   margin: 1.2em 0;
+}
+
+.song-form .h5 {
+   font-weight: normal;
+}
+
+.song-total {
+   align-items: baseline;
+}
+
+.song-total * {
+   font-weight: bold !important;
+}
+
+.song-total-price {
+   font-size: 24px;
+}
+
+.song-btn-wrap {
+   text-align: center;
+}
+
+.song-btn-wrap.modal-instance:not(.block) {
+   display: block;
+}
+
+.song-btn-wrap>a {
+   width: 300px;
+   background-color: #243169;
+   font-size: 24px;
+   padding: 4px 0;
+   border-color: #243169;
+
+}
+
+.song-btn-wrap>a:hover {
+   background-color: #09133d;
+}
+
+.song-btn-wrap>a>span {
+   font-weight: normal !important;
+}
+
+.song-modal {
+   min-width: 560px;
+   background: #09133d !important;
+   color: #fff;
+}
+
+.song-modal>h2 {
+   margin-bottom: 0;
+   color: #fff;
+}
+
+.song-modal>span {
+   font-size: 16px;
+}
+
+.song-modal-coin-info>p {
+   text-align: center;
+}
+
+.song-modal-coin-info>div {
+   margin-bottom: 16px;
+}
+
+.song-modal-coin-info>div>div {
+   display: inline-block;
+   vertical-align: middle;
+}
+
+.song-modal-coin-info-icon {
+   border: 1px solid #eee;
+   border-radius: 6px;
+   width: 80px;
+   height: 80px;
+   margin-right: 12px;
+   background: #fff;
+   color: #222;
+}
+
+.song-modal-coin-info-icon.usd {
+   text-align: center;
+   padding-top: 18px;
+}
+
+.song-modal-coin-info-icon.usd>span {
+   display: block;
+   color: #4a90e2;
+   line-height: 1.3;
+   font-size: 120%;
+}
+
+.song-modal-coin-info-txt {}
+
+.song-modal-coin-info-txt>h3 {
+   margin-bottom: 4px;
+   font-size: 1.4em;
+   color: #fff;
+}
+
+.song-modal-coin-info-txt>p {
+   font-size: 1.1em;
+}
+
+.song-modal-coin-info-txt>p>span {
+   color: #4a90e2;
+}
+
+.song-modal-result {}
+
+.song-modal-result>p {
+   text-align: center;
+   font-size: 1.1em;
+   padding: 20px 0;
+}
+
+.song-modal-result>p>i {
+   vertical-align: middle;
+}
+
+.song-modal-result>p.success>i {
+   color: #28a745;
+}
+
+.song-modal-result>p.error>i {
+   color: #f71f06;
+}
+
+.song-modal-line {
+   margin: 1.8em 0;
+   height: 1px;
+   background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+   background-size: 400% 400%;
+   animation: Gradient 6s ease infinite;
+}
+
+@keyframes Gradient {
+   0% {
+      background-position: 0% 50%
+   }
+
+   50% {
+      background-position: 100% 50%
+   }
+
+   100% {
+      background-position: 0% 50%
+   }
+}
+
+#loading21 {
+   position: relative;
+   width: 70px;
+   height: 70px;
+   margin: 18px auto 6px;
+}
+
+#loading21 .gradient {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   margin: -25px -25px;
+   width: 50px;
+   height: 50px;
+   border: 1px solid #ffffff;
+   border-radius: 100%;
+   box-shadow: 0 0 0 2px white inset,
+      0 -5px 20px 5px rgba(255, 0, 0, 0.5) inset,
+      0 0 20px 5px rgba(0, 255, 0, 0.5) inset,
+      0 5px 20px 5px rgba(0, 0, 255, 0.5) inset,
+      0 5px 20px 5px rgba(255, 0, 0, 0.5),
+      0 0 20px 5px rgba(0, 255, 0, 0.5),
+      0 -5px 20px 5px rgba(0, 0, 255, 0.5);
+
+   -webkit-animation: gradient 1s linear infinite;
+}
+
+@-webkit-keyframes gradient {
+   0% {
+      -webkit-transform: rotate(0deg);
+   }
+
+   100% {
+      -webkit-transform: rotate(360deg);
+   }
+}
