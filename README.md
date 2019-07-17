@@ -75,6 +75,7 @@ function getDepositBalance() {
 				}
 
 				// 결제 완료 화면으로 변경
+				$("#loading21").hide();
 				$(".song-modal-coin-info").hide();
 				$(".song-modal-result").show();
 			}
