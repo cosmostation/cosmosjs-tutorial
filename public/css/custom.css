@@ -8,7 +8,8 @@
 }
 
 .song-title {
-   padding-top: 5em;
+   padding-top: 3em;
+   padding-bottom: 0.5em;
 }
 
 .song-h1 {}
@@ -32,6 +33,9 @@
    background-color: #06c200;
 }
 
+.song-prd .product img{margin-bottom: 0;}
+.song-prd .product .label + img{margin-top: 1em;}
+
 .song-price {
    font-size: 24px;
    font-weight: 600;
@@ -43,6 +47,7 @@
    border-color: #d6d6d6 !important;
    color: #222;
    font-size: 18px;
+   margin-top: -20px !important;
 }
 
 .song-form hr {
@@ -170,7 +175,7 @@
 }
 
 .song-modal-result>p.success>i {
-   color: #28a745;
+   color: #6dff6e;
 }
 
 .song-modal-result>p.error>i {
